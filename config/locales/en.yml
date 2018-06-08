@@ -117,6 +117,10 @@ en:
         Invalid email or password.
         Were you a guest last time?  Perhaps you need to create an account or reset your password.
       unconfirmed: "You have to confirm your account before continuing."
+      already_registered: "This email address is already registered. Please log in to continue, or go back and use another email address."
+    user_passwords:
+      spree_user:
+        updated_not_active: "Your password has been reset, but your email has not been confirmed yet."
   enterprise_mailer:
     confirmation_instructions:
       subject: "Please confirm the email address for %{enterprise}"
@@ -741,7 +745,7 @@ en:
         welcome_title: Welcome to the Open Food Network!
         welcome_text: You have successfully created a
         next_step: Next step
-        choose_starting_point: 'Choose your starting point:'
+        choose_starting_point: 'Choose your package:'
       invite_manager:
         user_already_exists: "User already exists"
         error: "Something went wrong"
@@ -802,7 +806,7 @@ en:
         name: Name
         orders_open: Orders open at
         coordinator: Coordinator
-        order_closes: Orders close
+        orders_close: Orders close
       row:
         suppliers: suppliers
         distributors: distributors
@@ -1183,6 +1187,8 @@ en:
   footer_legal_tos: "Terms and conditions"
   footer_legal_visit: "Find us on"
   footer_legal_text_html: "Open Food Network is a free and open source software platform. Our content is licensed with %{content_license} and our code with %{code_license}."
+
+  footer_skylight_dashboard_html: Performance data is available on %{dashboard}.
 
   home_shop: Shop Now
 
@@ -1932,13 +1938,7 @@ See the %{link} to find out more about %{sitename}'s features and to start using
   spree_admin_enterprises_fees: "Enterprise Fees"
   spree_admin_enterprises_none_create_a_new_enterprise: "CREATE A NEW ENTERPRISE"
   spree_admin_enterprises_none_text: "You don't have any enterprises yet"
-  spree_admin_enterprises_producers_name: "Name"
-  spree_admin_enterprises_producers_total_products: "Total Products"
-  spree_admin_enterprises_producers_active_products: "Active Products"
-  spree_admin_enterprises_producers_order_cycles: "Products in OCs"
-  spree_admin_enterprises_producers_order_cycles_title: ""
   spree_admin_enterprises_tabs_hubs: "HUBS"
-  spree_admin_enterprises_tabs_producers: "PRODUCERS"
   spree_admin_enterprises_producers_manage_products: "MANAGE PRODUCTS"
   spree_admin_enterprises_any_active_products_text: "You don't have any active products."
   spree_admin_enterprises_create_new_product: "CREATE A NEW PRODUCT"
@@ -2205,7 +2205,7 @@ See the %{link} to find out more about %{sitename}'s features and to start using
   content_configuration_pricing_table: "(TODO: Pricing table)"
   content_configuration_case_studies: "(TODO: Case studies)"
   content_configuration_detail: "(TODO: Detail)"
-  enterprise_name_error: "has already been taken. If this is your enterprise and you would like to claim ownership, please contact the current manager of this profile at %{email}."
+  enterprise_name_error: "has already been taken. If this is your enterprise and you would like to claim ownership, or if you would like to trade with this enterprise please contact the current manager of this profile at %{email}."
   enterprise_owner_error: "^%{email} is not permitted to own any more enterprises (limit is %{enterprise_limit})."
   enterprise_role_uniqueness_error: "^That role is already present."
   inventory_item_visibility_error: must be true or false
@@ -2240,6 +2240,7 @@ See the %{link} to find out more about %{sitename}'s features and to start using
   order_cycles_no_permission_to_coordinate_error: "None of your enterprises have permission to coordinate an order cycle"
   order_cycles_no_permission_to_create_error: "You don't have permission to create an order cycle coordinated by that enterprise"
   back_to_orders_list: "Back to order list"
+  no_orders_found: "No Orders Found"
   order_information: "Order Information"
   date_completed: "Date Completed"
   amount: "Amount"
