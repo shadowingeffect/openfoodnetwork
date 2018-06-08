@@ -1112,6 +1112,7 @@ en:
 
 
   # Front-end controller translations
+  card_could_not_be_updated: Card could not be updated
   card_could_not_be_saved: card could not be saved
   spree_gateway_error_flash_for_checkout: "There was a problem with your payment information: %{error}"
 
@@ -2344,6 +2345,7 @@ See the %{link} to find out more about %{sitename}'s features and to start using
     choose: Choose
     resolve_errors: Please resolve the following errors
     more_items: "+ %{count} More"
+    default_card_updated: Default Card Updated
     admin:
       enterprise_limit_reached: "You have reached the standard limit of enterprises per account. Write to %{contact_email} if you need to increase it."
       modals:
@@ -2730,5 +2732,8 @@ See the %{link} to find out more about %{sitename}'s features and to start using
         total: Total
         paid?: Paid?
         view: View
+      saved_cards:
+        default?: Default?
+        delete?: Delete?
     localized_number:
       invalid_format: has an invalid format. Please enter a number.
