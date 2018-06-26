@@ -64,6 +64,10 @@ class AbilityDecorator
     can [:update, :destroy], Spree::CreditCard do |credit_card|
       credit_card.user == user
     end
+
+    can [:update], Customer do |customer|
+      customer.user == user
+    end
   end
 
   # New users can create an enterprise, and gain other permissions from doing this.
@@ -134,7 +138,7 @@ class AbilityDecorator
   def add_product_management_abilities(user)
     # Enterprise User can only access products that they are a supplier for
     can [:create], Spree::Product
-    can [:admin, :read, :update, :product_distributions, :seo, :group_buy_options, :bulk_edit, :bulk_update, :clone, :delete, :destroy], Spree::Product do |product|
+    can [:admin, :read, :index, :update, :product_distributions, :seo, :group_buy_options, :bulk_update, :clone, :delete, :destroy], Spree::Product do |product|
       OpenFoodNetwork::Permissions.new(user).managed_product_enterprises.include? product.supplier
     end
 

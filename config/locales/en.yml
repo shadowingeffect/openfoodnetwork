@@ -454,7 +454,7 @@ en:
 
     products:
       unit_name_placeholder: 'eg. bunches'
-      bulk_edit:
+      index:
         unit: Unit
         display_as: Display As
         category: Category
@@ -902,6 +902,10 @@ en:
         schedule_present: That order cycle is linked to a schedule and cannot be deleted. Please unlink or delete the schedule first.
       bulk_update:
         no_data: Hm, something went wrong. No order cycle data found.
+      date_warning:
+        msg: This order cycle is linked to %{n} open subscription orders. Changing this date now will not affect any orders which have already been placed, but should be avoided if possible. Are you sure you want to proceed?
+        cancel: Cancel
+        proceed: Proceed
     producer_properties:
       index:
         title: Producer Properties
@@ -2569,7 +2573,7 @@ See the %{link} to find out more about %{sitename}'s features and to start using
         new:
           title: 'New Product'
         unit_name_placeholder: 'eg. bunches'
-        bulk_edit:
+        index:
           header:
             title: Bulk Edit Products
           indicators:
@@ -2736,5 +2740,9 @@ See the %{link} to find out more about %{sitename}'s features and to start using
       saved_cards:
         default?: Default?
         delete?: Delete?
+      cards:
+        authorised_shops: Authorised Shops
+        authorised_shops_popover: This is the list of shops which are permitted to charge your default credit card for any subscriptions (ie. repeating orders) you may have. Your card details will be kept secure and will not be shared with shop owners. You will always be notified when you are charged.
+        saved_cards_popover: This is the list of cards you have opted to save for later use. Your 'default' will be selected automatically when you checkout an order, and can be charged by any shops you have allowed to do so (see right).
     localized_number:
       invalid_format: has an invalid format. Please enter a number.
